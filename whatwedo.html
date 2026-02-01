@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do | Romainder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #1b3d17; /* Formal Dark Green */
+            --soft-white: #f8f9f8;
+            --accent-green: #e8f0e7;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Consistent Logo from Homepage */
+        .site-logo {
+            position: fixed;
+            top: 30px;
+            left: 40px;
+            z-index: 1000;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 150px 10% 60px 10%;
+            background-color: var(--accent-green);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--primary-green);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Content Section */
+        .content-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .mission-statement {
+            font-size: 1.4rem;
+            color: var(--primary-green);
+            font-weight: 500;
+            border-left: 4px solid var(--primary-green);
+            padding-left: 30px;
+            margin-bottom: 50px;
+        }
+
+        .text-block {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 2px;
+        }
+
+        .highlight-box h2 {
+            margin-top: 0;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+        }
+
+        /* Back Button */
+        .back-nav {
+            display: block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: var(--primary-green);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        /* Footer (Consistent with Home) */
+        .site-footer {
+            background-color: var(--soft-white);
+            padding: 40px 0 20px 0;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Slideshow Container */
+.slideshow-container {
+    max-width: 900px; /* Limits width to keep it formal */
+    position: relative;
+    margin: 50px auto;
+    background: #fff;
+    border: 1px solid #eee; /* Light border like a gallery frame */
+    padding: 10px;
+}
+
+/* Hide images by default */
+.mySlides {
+    display: none;
+}
+
+/* This ensures all gallery images across all sections follow the same sizing rules */
+.mySlides1 img, .mySlides2 img, .mySlides3 img, .mySlides4 img {
+    width: 100%;
+    height: auto;
+    max-height: 65vh; /* Prevents the "too big" feeling by limiting height */
+    object-fit: contain; /* Shows the whole photo without bad cropping */
+    display: block;
+    margin: 0 auto;
+}
+
+.slideshow-container {
+    max-width: 800px;       /* Slims the container for a more formal look */
+    position: relative;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    background-color: rgba(27, 61, 23, 0.4);
+    text-decoration: none;
+}
+
+.next-btn { right: 10px; border-radius: 3px 0 0 3px; }
+.prev-btn { left: 10px; border-radius: 0 3px 3px 0; }
+.prev-btn:hover, .next-btn:hover { background-color: var(--primary-green); }
+
+/* The Dots */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover { background-color: var(--primary-green); }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.event-section {
+    margin: 80px 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.event-section h2 {
+    color: var(--primary-green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Specific styling for the stats to make them pop */
+strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* Adjusting the slideshow for smaller sections if needed */
+.small-gallery img {
+    height: 500px; /* Slightly shorter than the main bake sale one */
+    border-radius: 2px;
+}
+
+.highlight-box {
+    background-color: var(--primary-green);
+    color: #ffffff; /* Forces text to be pure white */
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.highlight-box h2 {
+    color: #ffffff; /* Ensures the header is also white */
+    margin-top: 0;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+}
+
+.highlight-box p {
+    color: #f0f0f0; /* Slightly off-white for easier reading */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="site-logo">ROMAINDER</a>
+
+    <header class="page-header">
+        <h1>What We Do</h1>
+    </header>
+
+    <main class="content-container">
+    
+        <section class="event-section">
+            <div class="highlight-box">
+                <h2>ECObites: A BAKESALE FOR THE EARTH</h2>
+                <p>Our inaugural initiative focuses on circularity. All funds raised are directed to the ROMAINDER fund, supporting upcycling efforts, education, and sustainable events.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides1 fade"><img src="Rsale.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale2.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale3.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale4.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale5.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale6.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale7.jpeg"></div>
+                <div class="mySlides1 fade"><img src="Rsale8.jpeg"></div>
+                
+                <a class="prev-btn" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next-btn" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+        </section>
+    
+        <section class="event-section">
+            <div class="highlight-box">
+                <h2>Beach Cleanups: Youth in Action</h2>
+                <p>ROMAINDER organizes beach cleanups, connecting youth nation-wide for a common goal. In 2023, we raised over $12,000 and diverted 100KG+ of recyclables.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides2 fade"><img src="Rbeach.jpeg"></div>
+                <div class="mySlides2 fade"><img src="Rbeach2.jpeg"></div>
+                
+                <a class="prev-btn" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next-btn" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+        </section
+    
+        <section class="event-section">
+            <div class="highlight-box">
+                <h2>RED CROSS INTERNATIONAL FAIR</h2>
+                <p>Our team managed to upcycle 600+ books and stationeries, ensuring nothing goes to waste and resources are repurposed for the community.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides3 fade"><img src="Rcross.jpeg"></div>
+                <div class="mySlides3 fade"><img src="Rcross1.jpeg"></div>
+                
+                <a class="prev-btn" onclick="plusSlides(-1, 2)">&#10094;</a>
+                <a class="next-btn" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+        </section>
+    
+        <section class="event-section">
+            <div class="highlight-box">
+                <h2>Global Student Empowerment Workshops</h2>
+                <p>Beyond local events, ROMAINDER facilitates workshops empowering students worldwide, equipping the next generation with the tools to build a circular economy.</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides4 fade" style="display:block;"><img src="Rworkshop.jpeg"></div>
+            </div>
+        </section>
+    
+        <a href="index.html" class="back-nav">← Back to Home</a>
+    </main>
+    
+    <script>
+        // Configuration for 4 galleries
+        let slideIndices = [1, 1, 1, 1]; 
+        let slideClassNames = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"];
+    
+        // Initialize all galleries
+        for (let i = 0; i < slideClassNames.length; i++) {
+            showSlides(1, i);
+        }
+    
+        function plusSlides(n, galleryIdx) {
+            showSlides(slideIndices[galleryIdx] += n, galleryIdx);
+        }
+    
+        function showSlides(n, galleryIdx) {
+            let i;
+            let slides = document.getElementsByClassName(slideClassNames[galleryIdx]);
+            
+            if (slides.length === 0) return;
+    
+            if (n > slides.length) { slideIndices[galleryIdx] = 1 }    
+            if (n < 1) { slideIndices[galleryIdx] = slides.length }
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            slides[slideIndices[galleryIdx]-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
