@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Romainder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #1b3d17;
+            --soft-white: #f8f9f8;
+            --accent-green: #e8f0e7;
+        }
+
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: white; color: #333; line-height: 1.8; }
+
+        .site-logo { position: fixed; top: 30px; left: 40px; z-index: 1000; font-weight: bold; letter-spacing: 3px; color: var(--primary-green); text-decoration: none; font-size: 1.2rem; }
+
+        .page-header { padding: 150px 10% 60px 10%; background-color: var(--accent-green); text-align: center; }
+        .page-header h1 { font-size: 3rem; color: var(--primary-green); letter-spacing: 5px; text-transform: uppercase; margin: 0; }
+
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        
+        h2 { color: var(--primary-green); letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+
+        .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .mv-item { background: var(--soft-white); padding: 30px; border-radius: 4px; text-align: center; }
+        .photo-placeholder { width: 100%; height: 250px; background: #ddd; margin-top: 15px; border-radius: 2px; object-fit: cover; display: block; }
+
+        .recognition-list { list-style: none; padding: 0; }
+        .recognition-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .recognition-list li::before { content: "•"; color: var(--primary-green); font-weight: bold; position: absolute; left: 0; font-size: 1.5rem; }
+
+        .back-nav-wrapper { text-align: center; padding: 60px 0; }
+        .back-nav { text-decoration: none; color: var(--primary-green); font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; }
+
+        footer { padding: 60px 20px; text-align: center; background: var(--soft-white); border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="site-logo">ROMAINDER</a>
+
+    <!-- The persistent menu icon -->
+<div class="menu-toggle" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<!-- Updated Sidebar -->
+<nav class="nav-sidebar" id="mainSidebar">
+    <div class="nav-links-wrapper">
+        <a href="whatwedo.html" class="side-link">WHAT WE DO</a>
+        <a href="ourstory.html" class="side-link">OUR STORY</a>
+        <a href="volunteer.html" class="side-link">JOIN US</a>
+        <a href="donation.html" class="side-link">SUPPORT</a>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <h1>Our Story</h1>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>The Journey</h2>
+            <p>ROMAINDER began as a youth-led initiative focused on tackling one of the world’s most overlooked environmental challenges: food waste. By combining youth leadership with community collaboration, the organization empowers students to design and lead sustainability initiatives within their own communities.</p>
+            <p>Through partnerships with farms, community organisations, and global sustainability networks, ROMAINDER diverts food waste and transforms it into opportunities for education, innovation, and environmental action.</p>
+            <p>In 2025, ROMAINDER embarked on a new journey; <strong>Sustainability - Starting with Us</strong>. Our initiatives shifted towards community involvement, allowing youth and elderly alike to take part in our global movement.</p>
+
+            <div class="mv-grid">
+                <div class="mv-item">
+                    <h3>OUR MISSION</h3>
+                    <p>To empower our community to reduce food waste through education, innovation, and community action.</p>
+                    <img src="" alt="Mission Photo" class="photo-placeholder">
+                </div>
+                <div class="mv-item">
+                    <h3>OUR VISION</h3>
+                    <p>A world where sustainable food practices are driven by youth leadership and community collaboration, starting with US.</p>
+                    <img src="" alt="Vision Photo" class="photo-placeholder">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Recognition</h2>
+            <ul class="recognition-list">
+                <li>The youngest organization under the Slow Food Youth Network</li>
+                <li>A recipient of the IB Global Youth Action Fund</li>
+                <li>A recipient of the National Youth Council Youth Action Challenge Grant</li>
+            </ul>
+        </section>
+
+        <div class="back-nav-wrapper">
+            <a href="index.html" class="back-nav">← Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p style="font-size: 0.8rem; color: #aaa;">&copy; 2026 ROMAINDER | SINGAPORE</p>
+    </footer>
+
+</body>
+</html>

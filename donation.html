@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Mission | Romainder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #1b3d17;
+            --soft-white: #f8f9f8;
+            --accent-green: #e8f0e7;
+            --text-gray: #555;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: var(--soft-white); 
+            color: #333; 
+            line-height: 1.6; 
+        }
+
+        .site-logo { 
+            position: fixed; top: 30px; left: 40px; z-index: 1000; 
+            font-weight: bold; letter-spacing: 3px; color: var(--primary-green); 
+            text-decoration: none; font-size: 1.2rem; 
+        }
+
+        /* Header Section */
+        .page-header { 
+            padding: 140px 10% 60px 10%; 
+            background: linear-gradient(rgba(27, 61, 23, 0.8), rgba(27, 61, 23, 0.8)), 
+                        url('Rsale.jpeg') no-repeat center center/cover;
+            text-align: center; 
+            color: white;
+        }
+
+        .page-header h1 { 
+            font-size: 2.5rem; letter-spacing: 5px; text-transform: uppercase; margin: 0; 
+        }
+
+        .header-subtext {
+            max-width: 700px; margin: 20px auto 0; font-weight: 300; font-size: 1.1rem;
+        }
+
+        /* Layout Grid */
+        .donation-container { 
+            max-width: 1100px; margin: -50px auto 80px; padding: 0 20px;
+            display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px;
+        }
+
+        /* Left Column: Impact Info */
+        .impact-info { 
+            background: white; padding: 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .impact-info h2 { color: var(--primary-green); text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid var(--accent-green); padding-bottom: 10px; }
+
+        .impact-item { margin-bottom: 30px; display: flex; gap: 20px; align-items: flex-start; }
+        .impact-item i { color: var(--primary-green); font-size: 1.5rem; margin-top: 5px; }
+
+        /* Right Column: Donation Form */
+        .donation-card { 
+            background: white; padding: 40px; border-radius: 4px; border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: fit-content;
+        }
+
+        /* Toggles */
+        .frequency-toggle {
+            display: flex; background: var(--accent-green); border-radius: 50px; padding: 5px; margin-bottom: 30px;
+        }
+        .toggle-btn {
+            flex: 1; border: none; padding: 12px; border-radius: 50px; cursor: pointer;
+            font-weight: bold; background: transparent; transition: 0.3s; color: var(--primary-green);
+        }
+        .toggle-btn.active { background: var(--primary-green); color: white; }
+
+        /* Amount Selection */
+        .amount-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .amount-btn {
+            padding: 15px; border: 1px solid #ddd; background: white; cursor: pointer;
+            font-weight: bold; border-radius: 4px; transition: 0.3s;
+        }
+        .amount-btn:hover, .amount-btn.active { border-color: var(--primary-green); color: var(--primary-green); background: var(--accent-green); }
+
+        .custom-amount { 
+            width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 20px; box-sizing: border-box;
+        }
+
+        /* Form Inputs */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; color: #777; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+
+        .donate-submit {
+            width: 100%; padding: 20px; background: var(--primary-green); color: white;
+            border: none; border-radius: 4px; font-weight: bold; text-transform: uppercase;
+            letter-spacing: 2px; cursor: pointer; transition: 0.3s; margin-top: 20px;
+        }
+        .donate-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .payment-methods { display: flex; justify-content: center; gap: 15px; margin-top: 20px; opacity: 0.5; font-size: 1.2rem; }
+
+        /* Back Navigation */
+        .back-link { display: block; text-align: center; margin-top: 40px; text-decoration: none; color: var(--primary-green); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+
+        @media (max-width: 850px) {
+            .donation-container { grid-template-columns: 1fr; }
+            .donation-container { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="site-logo">ROMAINDER</a>
+
+    <header class="page-header">
+        <h1>Every Contribution Counts</h1>
+        <p class="header-subtext">Support our mission to empower youth and build circular economies through food waste innovation and community action.</p>
+    </header>
+
+    <main class="donation-container">
+        
+        <!-- Impact Information -->
+        <div class="impact-info">
+            <h2>Your Impact</h2>
+            
+            <div class="impact-item">
+                <i class="fas fa-seedling"></i>
+                <div>
+                    <strong>Youth Empowerment</strong>
+                    <p>Your donation funds workshops that equip students with tools to build sustainable circular economies.</p>
+                </div>
+            </div>
+
+            <div class="impact-item">
+                <i class="fas fa-recycle"></i>
+                <div>
+                    <strong>Circular Initiatives</strong>
+                    <p>We support upcycling efforts and initiatives like ECObites that turn waste into community opportunity.</p>
+                </div>
+            </div>
+
+            <div class="impact-item">
+                <i class="fas fa-users"></i>
+                <div>
+                    <strong>Community Action</strong>
+                    <p>Funding directly supports nation-wide beach cleanups and intergenerational workshops with seniors.</p>
+                </div>
+            </div>
+
+            <div style="background: var(--accent-green); padding: 20px; border-radius: 4px; margin-top: 40px;">
+                <h4 style="margin-top: 0; color: var(--primary-green);">Transparency Commitment</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0;">100% of public donations are directed to the ROMAINDER fund for sustainable events and environmental education.</p>
+            </div>
+        </div>
+
+        <!-- Donation Form -->
+        <div class="donation-card">
+            <h3 style="text-align: center; margin-top: 0; letter-spacing: 1px;">Make a Donation</h3>
+            
+            <div class="frequency-toggle">
+                <button class="toggle-btn active" onclick="setFrequency('one-time', this)">One-Time</button>
+                <button class="toggle-btn" onclick="setFrequency('monthly', this)">Monthly</button>
+            </div>
+
+            <div class="amount-grid">
+                <button class="amount-btn" onclick="setAmount(10, this)">$10</button>
+                <button class="amount-btn active" onclick="setAmount(50, this)">$50</button>
+                <button class="amount-btn" onclick="setAmount(100, this)">$100</button>
+                <button class="amount-btn" onclick="setAmount(250, this)">$250</button>
+            </div>
+
+            <input type="number" class="custom-amount" placeholder="Other Amount (SGD)">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="As per NRIC/FIN/Passport">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="for your receipt">
+            </div>
+
+            <div style="font-size: 0.75rem; color: #888; margin-top: 20px;">
+                <label style="display: flex; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;"> 
+                    I would like to receive updates on ROMAINDER's impact and upcoming initiatives.
+                </label>
+            </div>
+
+            <button class="donate-submit">Donate Now</button>
+
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-apple-pay"></i>
+                <i class="fab fa-google-pay"></i>
+            </div>
+            
+            <p style="text-align: center; font-size: 0.7rem; color: #aaa; margin-top: 20px;">
+                Secure payment processed via Stripe. Your personal data is used solely for processing your contribution.
+            </p>
+        </div>
+
+    </main>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid #eee; margin-top: 60px;">
+        <p style="font-size: 0.8rem; color: #aaa;">&copy; 2026 ROMAINDER | SINGAPORE</p>
+    </footer>
+
+    <script>
+        function setFrequency(type, btn) {
+            document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        function setAmount(val, btn) {
+            document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelector('.custom-amount').value = '';
+        }
+    </script>
+</body>
+</html>
